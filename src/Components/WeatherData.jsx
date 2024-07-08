@@ -17,14 +17,14 @@ const WeatherData = (props) => {
             <img src={`assets/${props.weather.icon}.svg`} width={200} alt='icon'/>
         </div>
         <div>
-            {Math.round(props.weatherData.temp)}&deg;C
+            {Math.round(props.weatherData.temp/10)}&deg;C
             <p>{props.weather.description}</p>
         </div>
         </div>
         <div className='windData'>
             <p>{'Wind: '}<span>{props.windData.speed}&nbsp;mph</span></p>
-            <p>{'Min Temp: '}<span>{Math.round(props.weatherData.temp_min)}&deg;C</span></p>
-            <p>{'Max Temp: '}<span>{Math.round(props.weatherData.temp_max)}&deg;C</span></p>
+            <p>{'Min Temp: '}<span>{Math.round(props.weatherData.temp_min/10)}&deg;C</span></p>
+            <p>{'Max Temp: '}<span>{Math.round(props.weatherData.temp_max/10)}&deg;C</span></p>
         </div>
       </div>
       <div id='scrolledItem' className='forcastdata'>
