@@ -8,21 +8,13 @@ const WeatherData = (props) => {
     ).getMinutes()}`;
   };
 
-  const sideRight = () =>{
-    var slider = document.getElementById('scrolledItem');
-    slider.scrollLeft = slider.scrollLeft+300;
-  }
-  const sideLeft = () =>{
-    var slider = document.getElementById('scrolledItem');
-    slider.scrollLeft = slider.scrollLeft-300;
-  }
 
   return (
     <div className='weatherData'>
       <div className='currtemp'>
         <div className='tempAndLogo'>
         <div>
-            <img src={`../src/assets/${props.weather.icon}.svg`} width={200} alt='icon'/>
+            <img src={`assets/${props.weather.icon}.svg`} width={200} alt='icon'/>
         </div>
         <div>
             {Math.round(props.weatherData.temp)}&deg;C
